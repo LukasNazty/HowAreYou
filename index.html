@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>How are you?</title>
+
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <script src="index.js" ></script>
+    </head>
+
+    <body>
+        <div class="center">
+            <div id="head" class="headline">
+                <p>Are you doing well?</p>
+            </div>
+    
+            <div class="table">
+                <div class="row">
+                    <form action="auswahl" method="post">
+                            <div class="zelle">
+                                <input type="button" name="zustimmen" value="Yes" onclick="ja()">
+                            </div>
+
+                            <div class="zelle" id="random">
+                                <input type="button" name="ablehnen" value="No" onclick="nein()">
+                            </div>
+                    </form>
+                </div>
+            </div>
+            <div align="center" class="daumenhoch">
+                <img src="Bilder/blankPNG.png" alt="BildvonReaktionen" id="wahl" width="200vw" height="200vh">
+            </div>
+        </div>
+        
+    </body>
+</html>
