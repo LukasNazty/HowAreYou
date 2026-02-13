@@ -7,11 +7,13 @@
 
 body{
     margin: 0px;
-    background-image: url('Bilder/background.jpg');
+    background-image: url('Bilder/hearts.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
+    background-color: rgb(206, 83, 83);
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
+    overflow:  hidden;
 }
 
 p{
@@ -20,6 +22,11 @@ p{
 form{
     margin:0;
 }
+
+#zustimmen {
+    z-index: 10;
+}
+
 
 .center{
   position: absolute;
@@ -97,7 +104,6 @@ input[type=button]{
   touch-action: manipulation;
   width: auto;
   will-change: transform,opacity;
-  z-index: 0;
 }
 
 input[type=button]:hover {
