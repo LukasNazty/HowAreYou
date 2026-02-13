@@ -1,10 +1,12 @@
 var root=document.querySelector(':root');
 let textchange;
+let scale = 1;
+let count = 0;
 
 function ja()
 {
-    textchange="Yay you're doing fine!";
-    document.getElementById("wahl").src= "Bilder/thumbsUP.png"
+    textchange="i knew you would say yes! 😇";
+    document.getElementById("wahl").src= "Bilder/YesEmoji.png"
     document.getElementById('head').innerHTML= textchange;
     root.style.setProperty('--enable', 'visible');
     root.style.setProperty('--disable', 'hidden');
@@ -13,12 +15,19 @@ function ja()
 let x,xstring,y,ystring;
 function nein()
 {
-    textchange="'No' isn't an option... &#x1f62c;";
-    document.getElementById('head').innerHTML= textchange;
+    if(count>=4)
+    {
+        textchange="'No' is not an option... &#x1f62c;";
+        document.getElementById('head').innerHTML= textchange;
 
-    root.style.setProperty('--enable', 'visible');
+        root.style.setProperty('--enable', 'visible');
 
-    document.getElementById("wahl").src= "Bilder/128x128Ultramad.webp"
+        document.getElementById("wahl").src= "Bilder/128x128Ultramad.webp"
+    }
+
+
+    scale *= 1.5;
+    document.getElementById("zustimmen").style.transform = `scale(${scale})`;
 
     do{
         x=0;
@@ -41,4 +50,6 @@ function nein()
 
     root.style.setProperty('--posX', xstring);
     root.style.setProperty('--posY', ystring);
+    
+    count++;
 }
